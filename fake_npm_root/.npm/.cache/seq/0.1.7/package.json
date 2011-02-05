@@ -1,0 +1,36 @@
+{
+  "name": "seq",
+  "version": "0.1.7",
+  "description": "Chainable asynchronous flow control with sequential and parallel primitives and pipeline-style error handling",
+  "modules": {
+    "index": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/substack/node-seq.git"
+  },
+  "dependencies": {
+    "chainsaw": ">=0.0.5",
+    "traverse": ">=0.2.3"
+  },
+  "license": "MIT/X11",
+  "engine": [
+    "node >=0.2.0"
+  ],
+  "_id": "seq@0.1.7",
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "0.2.16",
+  "_nodeVersion": "v0.3.5",
+  "directories": {},
+  "files": [
+    ""
+  ],
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "3a045ef6ed632584d61ed921018545b424c66199",
+    "tarball": "http://registry.npmjs.org/seq/-/seq-0.1.7.tgz"
+  }
+}

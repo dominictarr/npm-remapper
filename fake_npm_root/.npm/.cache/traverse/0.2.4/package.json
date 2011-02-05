@@ -1,0 +1,36 @@
+{
+  "name": "traverse",
+  "version": "0.2.4",
+  "description": "Traverse and transform objects by visiting every node on a recursive walk.",
+  "author": {
+    "name": "James Halliday"
+  },
+  "license": "MIT/X11",
+  "modules": {
+    "index": "./lib/traverse",
+    "web": "./lib/web",
+    "hash": "./lib/hash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/substack/js-traverse.git"
+  },
+  "_id": "traverse@0.2.4",
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "0.2.16",
+  "_nodeVersion": "v0.3.5",
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    ""
+  ],
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "016fbc5d5df5bdc4ae1afd7eb9e827d36ed0c59c",
+    "tarball": "http://registry.npmjs.org/traverse/-/traverse-0.2.4.tgz"
+  }
+}

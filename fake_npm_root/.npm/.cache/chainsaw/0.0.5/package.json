@@ -1,0 +1,48 @@
+{
+  "name": "chainsaw",
+  "version": "0.0.5",
+  "description": "Build chainable fluent interfaces the easy way... with a freakin' chainsaw!",
+  "modules": {
+    "index": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/substack/node-chainsaw.git"
+  },
+  "dependencies": {
+    "traverse": ">=0.2.3"
+  },
+  "keywords": [
+    "chain",
+    "fluent",
+    "interface",
+    "monad",
+    "monadic"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT/X11",
+  "engine": [
+    "node >=0.2.0"
+  ],
+  "_id": "chainsaw@0.0.5",
+  "engines": {
+    "node": "*"
+  },
+  "_nodeSupported": true,
+  "_npmVersion": "0.2.16",
+  "_nodeVersion": "v0.3.5",
+  "dist": {
+    "shasum": "1aa311c14ebb1e7e401391f341bbef000078bd35",
+    "tarball": "http://registry.npmjs.org/chainsaw/-/chainsaw-0.0.5.tgz"
+  },
+  "directories": {},
+  "_engineSupported": true,
+  "files": [
+    ""
+  ],
+  "_defaultsLoaded": true
+}

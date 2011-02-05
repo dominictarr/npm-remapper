@@ -1,0 +1,50 @@
+{
+  "name": "npmdep",
+  "version": "0.0.2",
+  "description": "Build a dependency graph for npm packages",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/substack/npmdep.git"
+  },
+  "bin": {
+    "npmdep": "./cli.js"
+  },
+  "main": "./index",
+  "dependencies": {
+    "traverse": ">=0.2.3",
+    "seq": ">=0.1.7",
+    "npm": ">=0.2.14",
+    "graphviz": ">=0.0.3"
+  },
+  "keywords": [
+    "npm",
+    "dependencies",
+    "graph",
+    "contributors"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT/X11",
+  "engine": [
+    "node >=0.2.0"
+  ],
+  "_id": "npmdep@0.0.2",
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "0.2.16",
+  "_nodeVersion": "v0.3.5",
+  "directories": {},
+  "files": [
+    ""
+  ],
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "b710405ef42e84272963fc4b67553470d5024662",
+    "tarball": "http://registry.npmjs.org/npmdep/-/npmdep-0.0.2.tgz"
+  }
+}

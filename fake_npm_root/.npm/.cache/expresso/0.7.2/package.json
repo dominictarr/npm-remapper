@@ -1,0 +1,39 @@
+{
+  "name": "expresso",
+  "version": "0.7.2",
+  "description": "TDD framework, light-weight, fast, CI-friendly",
+  "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+  },
+  "bin": {
+    "expresso": "./bin/expresso",
+    "node-jscoverage": "./deps/jscoverage/node-jscoverage"
+  },
+  "scripts": {
+    "preinstall": "make deps/jscoverage/node-jscoverage"
+  },
+  "_id": "expresso@0.7.2",
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "0.2.16",
+  "_nodeVersion": "v0.3.5",
+  "dist": {
+    "shasum": "b4df7483733eee3121aa1651180e04f80bf53fa2",
+    "tarball": "http://registry.npmjs.org/expresso/-/expresso-0.7.2.tgz"
+  },
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin"
+  },
+  "modules": {
+    "foo.js": "lib/foo.js",
+    "bar.js": "lib/bar.js"
+  },
+  "files": [
+    ""
+  ],
+  "_defaultsLoaded": true
+}

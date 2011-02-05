@@ -1,0 +1,58 @@
+{
+  "name": "class-js",
+  "description": "Simple OO Class factory",
+  "version": "0.0.2",
+  "keywords": [
+    "node",
+    "class",
+    "oop",
+    "inheritance"
+  ],
+  "author": {
+    "name": "Brian Noguchi",
+    "email": "brian.noguchi@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Brian Noguchi",
+      "url": "http://ngchi.wordpress.com"
+    }
+  ],
+  "licenses": [
+    "MIT"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bnoguchi/class-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bnoguchi/class-js/issues"
+  },
+  "directories": {
+    "test": "./test"
+  },
+  "os": [
+    "linux",
+    "darwin"
+  ],
+  "dependencies": {
+    "expresso": ">= 0.7.0"
+  },
+  "engines": {
+    "node": ">=0.2.5"
+  },
+  "main": "./class",
+  "_id": "class-js@0.0.2",
+  "_nodeSupported": true,
+  "_npmVersion": "0.2.16",
+  "_nodeVersion": "v0.3.5",
+  "dist": {
+    "tarball": "http://registry.npmjs.org/class-js/-/class-js-0.0.2.tgz",
+    "shasum": "6237e87077ca171caf82164b845c00a24e9f574b"
+  },
+  "_engineSupported": true,
+  "files": [
+    ""
+  ],
+  "_defaultsLoaded": true
+}
