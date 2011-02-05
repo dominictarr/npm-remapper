@@ -4,7 +4,7 @@ var it = require('it-is')
   , NpmRemapper = require('../npm-remapper')
   , semver = require('npm/utils/semver')
   , packager = require('../package')
-  , npm_path = process.env.HOME + '/dev/npm-remapper/fake_npm_root/.npm/'
+//  , npm_path = process.env.HOME + '/dev/npm-remapper/fake_npm_root/.npm/'
 
 exports ['create instance'] = function (){
 
@@ -19,7 +19,7 @@ exports ['create instance'] = function (){
 exports ['can load npm modules'] = function (){
 
   var npmr = NpmRemapper(module)
-    , class = npmr.require('../fake_npm_root/class-js')
+    , class = npmr.require('./fake_npm_root/class-js')
 
   it(class)
     .has({
@@ -43,7 +43,7 @@ function assertLoadModule(name,version,api,depends){
   
   var npmr = NpmRemapper(module, remaps)
 
-  var mod = npmr.require('../fake_npm_root/' + name)
+  var mod = npmr.require('./fake_npm_root/' + name)
 
   it(mod)
     .has(api || {})
@@ -86,8 +86,8 @@ exports ['load more complex into tree'] = function (){
 
   var npmr = NpmRemapper(module)
     , Pack = packager()
-    , npmdep = npmr.require('../fake_npm_root/npmdep')
-    , class = npmr.require('../fake_npm_root/class-js')
+    , npmdep = npmr.require('./fake_npm_root/npmdep')
+    , class = npmr.require('./fake_npm_root/class-js')
     , example1 =  
       { name: 'npmdep'
       , version: '0.0.2'

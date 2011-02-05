@@ -1,0 +1,23 @@
+{
+  "name": "npm-remapper",
+  "description": "remap npm package version dynamicially",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dominictarr/npm-remapper",
+  "repository": "git://github.com/dominictarr/npm-remapper.git",
+  "author": "Dominic Tarr <dominic.tarr@gmail.com>",
+  "main": "npm-remapper",
+  "directories": {
+    "lib": ""
+  },
+  "dependencies": {
+    "remap": ">=0.0.1"
+  },
+  "devDependencies": {
+    "it-is": "*"
+  , "expresso": "*"
+  , "npm": "*"
+  },
+  "engines": {
+    "node": ">=0.3.0"
+  }
+}
