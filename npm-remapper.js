@@ -19,20 +19,20 @@ okay, -- make CLI for remapper.
 
 var modules = require('remap/modules')
   , resolveModule = require('remap/resolve').resolveModuleFilename
-  , log = require('logger') //console.log
-//  , assert = require('assert')
   , packager = require('./package')
-
+  , semver = require('./semver').semver
+  , npm_path = ".*/\\.npm\/"
+  , pack  = new RegExp ('^(' + npm_path + ')([\\w-]+)\/(' + semver + ')\/(.*)')
+  console.log(pack)
+  
+  
 exports = module.exports = NpmRemapper
 exports.NpmRemapper = NpmRemapper 
+exports.match = nameVersion
+exports.matchRegExp = pack
 
-  var npm_path = ".*/\\.npm/"
-  var pack  = new RegExp ('^(' + npm_path + ')([\\w-]+)/([\\d|.]+\\w+)/(.*)$')
-
-function NpmRemapper(_module,remaps){
-  if(!(this instanceof NpmRemapper)) return new NpmRemapper(_module,remaps)
-  
 function nameVersion (filepath){
+  var matched
   if(matched = pack(filepath)){
     return {
         name: matched[2]
@@ -45,6 +45,10 @@ function nameVersion (filepath){
     }
   }
 }
+
+function NpmRemapper(_module,remaps){
+  if(!(this instanceof NpmRemapper)) return new NpmRemapper(_module,remaps)
+ 
 
   this.remaps = remaps = remaps || {}
   var deps = {}
@@ -60,22 +64,23 @@ function nameVersion (filepath){
     
   function resolve(request,module){
     var resolved = resolveModule(request,module)
-      , matched
+      , matched = nameVersion(resolved[1])
 
-    if(matched = nameVersion(resolved[1])){
+    if(matched){
       var name = matched.name
         , version = matched.version
 
       if(remaps[name]){
-        version = remaps[name]
+//      console.log(name, '@', version, '->',remaps[name])
+          version = remaps[name]
         resolved [1] = matched.path + name + '/' + version + '/' + matched.rest
       }
 
       resolves[resolved[0]] = resolved[1]
 
-    if(rootset[module.id]){
-      roots[name] = Pack(name,version)
-    }
+      if(rootset[module.id]){
+        roots[name] = Pack(name,version)
+      }
 
       if(resolves[module.id]){
         var nv2 = nameVersion(resolves[module.id])
@@ -83,7 +88,7 @@ function nameVersion (filepath){
           ; 
         else{
           Pack(nv2.name,nv2.version)
-            .add(matched.name,matched.version)
+            .add(matched.name,version)
         }
       }
 

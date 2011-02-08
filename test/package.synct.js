@@ -1,7 +1,7 @@
 
 var it = require('it-is')
   , packager = require('../package')
-  , semver = require('npm/utils/semver')
+//  , semver = require('../semver')
   , log = require('logger')
   , example =  
     { name: 'npmdep'
@@ -66,5 +66,15 @@ exports ['chaining API'] = function (){
     .add('traverse','0.2.4')
 
   it(tree).has(example)
+
+}
+
+
+exports ['linked version'] = function (){
+
+ var Pack = packager()
+
+  var tree = 
+  Pack('traverser','9999.0.0-LINK-7889eeec')
 
 }

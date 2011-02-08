@@ -2,7 +2,7 @@
 
 var it = require('it-is')
   , NpmRemapper = require('../npm-remapper')
-  , semver = require('npm/utils/semver')
+  , semver = require('../semver')
   , packager = require('../package')
 //  , npm_path = process.env.HOME + '/dev/npm-remapper/fake_npm_root/.npm/'
 
@@ -31,7 +31,7 @@ exports ['can load npm modules'] = function (){
   it(npmr.flatDepends)
     .has([{
         name: 'class-js'
-      , version: function (x){ it(semver.valid(x)).ok() }
+      , version: function (x){ it(semver.parse(x)).ok() }
       }])
 }
 
@@ -119,4 +119,30 @@ exports ['load more complex into tree'] = function (){
       npmdep: example1
     , 'class-js': example2
     })
+}
+//*/
+exports ['test path matcher'] = function (){
+
+var NpmRemapper = require('../npm-remapper')
+
+  it(
+  [ [ '/home/dominic/dev/npm-remapper/test/fake_npm_root/.npm/class-js/0.0.2/package/class.js'
+    , 'class-js'
+    , '0.0.2' ]
+  , [ '/home/dominic/.node_libraries/.npm/traverse/0.2.3/package/lib/traverse.js'
+    , 'traverse'
+    , '0.2.3' ]
+  , [ '/home/dominic/.node_libraries/.npm/traverse/999.999.999.-LINK-2349fse9/package/lib/traverse.js'
+    , 'traverse'
+    , '999.999.999.-LINK-2349fse9' ]
+  , [ '/home/dominic/.node_libraries/.npm/it-is/9999.0.0-LINK-b9897d2e/package/index.js'
+    , 'it-is'
+    , '9999.0.0-LINK-b9897d2e' ]
+  ]).every(function (e){
+    var m = NpmRemapper.match(e[0])
+    it(m).has({name: e[1], version: e[2]})
+    console.log(e[0])
+    console.log(m)
+  })
+
 }

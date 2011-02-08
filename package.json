@@ -10,12 +10,15 @@
     "lib": ""
   },
   "dependencies": {
-    "remap": ">=0.0.1"
+    "remap": ">=0.0.1",
+    "nih-op": "*"
   },
   "devDependencies": {
     "it-is": "*"
   , "expresso": "*"
-  , "npm": "*"
+  },
+  "scripts" : {
+    "test": "expresso test/*.js"  
   },
   "engines": {
     "node": ">=0.3.0"
